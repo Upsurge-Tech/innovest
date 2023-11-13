@@ -1,48 +1,30 @@
 import React, { useState } from "react";
 
-import img1 from "../../assets/images/partner_img/Elon.png";
-import img2 from "../../assets/images/partner_img/Modi.jpg";
-import img3 from "../../assets/images/partner_img/Albert.jpeg";
-import img4 from "../../assets/images/partner_img/Messi.jpg";
-import img5 from "../../assets/images/partner_img/Mandela.jpg";
+import img1 from "../../assets/images/partner_img/person.png";
 import right from "../../assets/images/partner_img/Right.png";
 
 
 export const cards = [
   {
     image: img1,
-    name: "Elon Musk",
+    name: "Solomon Getachew",
     role: "Manager",
     quote:
       ' "I couldn\'t be happier with the services provided by Innovest Africa Business Group. Their commitment to quality and reliability is truly outstanding. I highly recommend them to anyone looking for a trustworthy partner in the industry"',
   },
   {
-    image: img2,
-    name: "Narendra Modi",
-    role: "Manager",
+    image: img1,
+    name: "Nimiya Sundey",
+    role: "Company Manager",
     quote:
-      ' "I am extremely satisfied with the services offered by XYZ Company. Their dedication to excellence and dependability is truly remarkable. I wholeheartedly endorse them to anyone seeking a reliable partner in the field."',
+      ' "I am extremely satisfied with the services offered by Innovest. Their dedication to excellence and dependability is truly remarkable. I wholeheartedly endorse them to anyone seeking a reliable partner in the field."',
   },
   {
-    image: img3,
-    name: "Albert Einstain",
+    image: img1,
+    name: "Elsabeth Demis",
     role: "Researcher",
     quote:
-      ' "I am overjoyed with the exceptional services provided by ABC Corporation. Their unwavering commitment to delivering quality and reliability is truly exceptional. I enthusiastically recommend them to anyone searching for a reliable partner in the sector."',
-  },
-  {
-    image: img5,
-    name: "Nelson Mandela",
-    role: "Researcher",
-    quote:
-      ' "I am thrilled with the top-notch services extended by DEF Enterprises. Their steadfast dedication to providing quality and reliability is genuinely impressive. I highly recommend them to anyone in need of a trustworthy partner in the business."',
-  },
-  {
-    image: img4,
-    name: "Leonel Messi",
-    role: "Researcher",
-    quote:
-      ' "I am delighted with the outstanding services rendered by GHI Industries. Their unwavering commitment to delivering excellence and reliability is truly commendable. I wholeheartedly endorse them to anyone seeking a dependable partner in the industry."',
+      ' "I am overjoyed with the exceptional services provided by Innovest ABG. Their unwavering commitment to delivering quality and reliability is truly exceptional. I enthusiastically recommend them to anyone searching for a reliable partner in the sector."',
   },
 ];
 
@@ -65,7 +47,7 @@ const CardCarousel = () => {
   const nextCard = cards[nextIndex];
 
   return (
-    <div className="flex justify-between mt-16 md:mt-10 w-4/5 mx-auto">
+    <div className="flex justify-between mt-16 md:mt-10 w-4/5 mx-auto pt-16 mt-8">
       <button className="" onClick={handlePrevious}>
         <div className="md:w-[80px] md:h-[80px] w-[60px] h-[60px]">
           <img

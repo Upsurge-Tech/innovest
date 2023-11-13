@@ -23,7 +23,7 @@ export default function OurMissionAndVision() {
           src={deco}
           />
           <p className="text-[35px]">Know the Business</p>
-          <h2 className="text-[35px] font-bold">Our Vision and Mission</h2>
+          <h2 className="text-[35px] font-bold">Our Mission and Vision</h2>
         </div>
         <br />
         <div className="flex flex-col md:flex-row gap-[65px]">

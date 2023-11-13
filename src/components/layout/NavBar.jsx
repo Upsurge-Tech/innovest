@@ -1,15 +1,16 @@
-import { React, useState } from 'react'
+import { React, useState, useEffect } from 'react'
 import logo from "../../assets/images/home/logo.png";
+import logoW from "../../assets/images/home/logowhite.jpg";
 const NavBar = () => {
   const links = [
     { name: 'Home', to: '#' },
     { name: 'About Us', to: '#about' },
     { name: 'services', to: '#services' },
-    { name: 'market', to: '#' },
-    { name: 'partners', to: '#' },
+    { name: 'Testimonials', to: '#testimonials' },
   ]
   const [isOpen, setIsOpen] = useState(false)
   const [active, setActive] = useState('')
+  const [scrolling, setScrolling] = useState(false);
   const toggleNavbar = () => {
     setIsOpen(!isOpen)
   }
@@ -17,23 +18,46 @@ const NavBar = () => {
     setActive(name)
     console.log(name)
   }
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScrolling(true);
+      } else {
+        setScrolling(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <div className="">
       <nav
+        // className={`${
+        //   isOpen ? '' : ''
+        // } w-full z-20 top-0 left-0 text-tertiary-text font-semibold fixed`}
         className={`${
-          isOpen ? 'bg-[#FFFFFF]' : 'bg-white'
-        } w-full z-20 top-0 left-0 text-secondary-text shadow-slate-200 shadow-lg`}
+          scrolling ? 'bg-white text-primary-text shadow-md' : 'w-full z-20 top-0 left-0 text-tertiary-text font-semibold fixed'
+        } w-full z-20 top-0 left-0 text-primary-text font-semibold fixed transition-all duration-300`}
+     
       >
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 ml-4 md:ml-12 mr-8 md:mr-16">
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2 ml-4 md:ml-12 mr-8 md:mr-16">
+          <div className=' mt-'>
           <a href="/#" className="flex items-center">
             <img
               src={logo}
-              width={170}
-              height={170}
+              width={100}
+              height={140}
               alt="africa bussiness group logo"
+
             />
           </a>
+          </div>
+          
           <div className="flex md:order-1">
             <button
               type="button"
@@ -72,13 +96,13 @@ const NavBar = () => {
                     href={`${link.to}`}
                     className={`${
                       active === link.name
-                        ? 'text-blue-500 font-semibold'
+                        ? 'text-blue-500 font-bold'
                         : 'py-2'
                     } uppercase relative block text-sm pl-3 pr-4 transision duration-75 md:hover:bg-transparent md:hover:text-blue-500 md:p-0`}
                     aria-current="page"
                   >
                     {link.name}
-                    {active === link.name && (
+                    {active === link.name && active !== "contact" && (
                       <span className="transition absolute md:top-10 lg:top-12 left-0 w-full h-0 md:h-1 bg-blue-500 transision duration-150"></span>
                     )}
                   </a>
@@ -87,6 +111,7 @@ const NavBar = () => {
             </ul>
             <a href="#contact">
               <button
+              onClick={() => handleActive("contact")}
                 type="button"
                 className="focus:ring-4 focus:outline-none uppercase focus:ring-blue-300 font-medium rounded-lg text-sm px-8 py-3 text-center border border-primary ml-4 md:ml-8 bg-gradient-to-r from-[#100F36] to-[#265E32] text-white"
               >

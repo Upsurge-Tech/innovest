@@ -9,11 +9,11 @@ export default function ServicesCard({
   return (
     <div
       className={
-        'bg-[#F1F2FF] rounded-[30px] border flex flex-col ' +
+        'bg-[#F5F6FF] rounded-xl border flex flex-col ' +
         (flip ? 'md:flex-row-reverse' : 'md:flex-row')
       }
     >
-      <div className="md:min-h-[418px] md:min-w-[418px] flex flex-col">
+      <div className="md:w-[350px] flex flex-col mt-4 mb-4 ml-4 mr-4">
         {imageComponent}
       </div>
 
