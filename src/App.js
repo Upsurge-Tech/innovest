@@ -7,19 +7,21 @@ import Partners from './components/partner/partner.jsx'
 import OurMissionAndVision from './components/our-mission-and-vision/index.jsx'
 import Services from './components//services/index.jsx'
 import TeamSection from './components/team/team_section.jsx'
+import Footer from './components/layout/Footer.jsx'
 import './App.css';
 
 function App() {
   return (
     <>
     <NavBar />
-    <HomePage />
-    <About/>
+    <HomePage  videoId={`yY13Y9a3Naw?si=zllhESflJ389kGs-`}/>
+    <About />
     <OurMissionAndVision/>
     <TeamSection/>
     <Services/>
     <Partners/>
     <Contact/>
+    <Footer />
     
     </>
     

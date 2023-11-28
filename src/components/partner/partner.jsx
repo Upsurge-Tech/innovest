@@ -1,12 +1,13 @@
 import Carousal from "../partner/carousal";
 import React from "react";
 import line from "../../assets/images/partner_img/Line.png";
-import node from "../../assets/images/partner_img/NodeJS.png";
+import node from "../../assets/images/partner_img/com.jpg";
+import ups from "../../assets/images/partner_img/upsurge.png";
 
 const Partners = () => {
   return (
     <div>
-      <div className="">
+      <div id = "testimonials" className="min-w-screen pt-16 mt-8">
         <div className="flex flex-col items-center py-10 bg-black text-white text-[30px]">
           <div className="">
             <img src={line} alt="img" />
@@ -25,7 +26,7 @@ const Partners = () => {
             </h1>
           </div>
           <Carousal />
-          <div className="md:mt-20 mt-10">
+          {/* <div className="md:mt-20 mt-10 ">
             <div className="flex flex-col">
               <div className="mx-auto">
                 <img src={line} alt="img" />
@@ -35,11 +36,11 @@ const Partners = () => {
                 <br />
                 <span className="font-bold">Partners</span>
               </p>
-            </div>
-            <div className="mt-10">
+            </div> */}
+            {/* <div className="mt-10">
               <div className="flex flex-wrap justify-between md:w-2/3 mx-auto py-4 gap-y-4 md:px-0 px-4">
-                <div className="w-[105px] h-[105px]">
-                  <img src={node} alt="img" />
+                <div className="w-[85px] h-[95px]">
+                  <img src={ups} alt="img" />
                 </div>
                 <div className="w-[105px] h-[105px]">
                   <img src={node} alt="img" />
@@ -47,16 +48,8 @@ const Partners = () => {
                 <div className="w-[105px] h-[105px]">
                   <img src={node} alt="img" />
                 </div>
-                <div className="w-[105px] h-[105px]">
-                  <img src={node} alt="img" />
-                </div>
-                <div className="w-[105px] h-[105px]">
-                  <img src={node} alt="img" />
-                </div>
-                <div className="w-[105px] h-[105px]">
-                  <img src={node} alt="img" />
-                </div>
-              </div>
+                 */}
+              {/* </div>
               <div className="flex flex-wrap justify-between md:w-2/3 mx-auto py-4 gap-y-4 md:px-0 px-4">
               <div className="w-[105px] h-[105px]">
                   <img src={node} alt="img" />
@@ -66,19 +59,11 @@ const Partners = () => {
                 </div>
                 <div className="w-[105px] h-[105px]">
                   <img src={node} alt="img" />
-                </div>
-                <div className="w-[105px] h-[105px]">
-                  <img src={node} alt="img" />
-                </div>
-                <div className="w-[105px] h-[105px]">
-                  <img src={node} alt="img" />
-                </div>
-                <div className="w-[105px] h-[105px]">
-                  <img src={node} alt="img" />
-                </div>
-              </div>
-            </div>
-          </div>
+                </div> */}
+                
+              {/* </div> */}
+            {/* </div> */}
+          {/* </div> */}
         </div>
       </div>
     </div>
