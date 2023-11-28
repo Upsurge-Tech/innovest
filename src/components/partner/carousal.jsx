@@ -7,7 +7,7 @@ import right from "../../assets/images/partner_img/Right.png";
 export const cards = [
   {
     image: img1,
-    name: "Solomon Getachew",
+    name: "Iman Ada",
     role: "Manager",
     quote:
       ' "I couldn\'t be happier with the services provided by Innovest Africa Business Group. Their commitment to quality and reliability is truly outstanding. I highly recommend them to anyone looking for a trustworthy partner in the industry"',
@@ -21,11 +21,24 @@ export const cards = [
   },
   {
     image: img1,
-    name: "Elsabeth Demis",
+    name: "Kelani Atu",
     role: "Researcher",
     quote:
       ' "I am overjoyed with the exceptional services provided by Innovest ABG. Their unwavering commitment to delivering quality and reliability is truly exceptional. I enthusiastically recommend them to anyone searching for a reliable partner in the sector."',
   },
+  {
+    image: img1,
+    name:"Deba Raman",
+    role: "Researcher",
+    quote:
+      ' "I am thrilled with the outstanding services offered by Innovest ABG. Their steadfast dedication to delivering excellence and reliability is truly remarkable. I wholeheartedly recommend them to anyone seeking a dependable partner in the industry." ' ,
+  
+  },    {
+    image: img1,
+    name: "Nuri Zaba",
+    role: "Researcher",
+    quote:
+      ' "I am delighted with the exceptional services provided by Innovest ABG. Their unwavering commitment to delivering quality and reliability is truly remarkable. I highly recommend them to anyone in search of a reliable partner in the sector."' },
 ];
 
 const CardCarousel = () => {
@@ -82,7 +95,7 @@ const CardCarousel = () => {
           <p className="font-bold text-[20px] text-[#00407B]">
             {currentCard.name}
           </p>
-          <p className="text-[15px]">{currentCard.role}</p>
+          {/* <p className="text-[15px]">{currentCard.role}</p> */}
         </div>
       </div>
       <button className="" onClick={handleNext}>

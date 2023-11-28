@@ -59,51 +59,6 @@ const ServiceModalThree = ({onClose}) => {
             </p>
           </div>
         </div>
-        <div className="text-[11px] lg:text-[13px] py-3 lg:hidden">
-          <div className="">
-            <div className="lg:mb-4">
-              <h1 className="font-bold">
-                Expertise in Export and Distribution:
-              </h1>
-              <p className="">
-                Our team possesses an in-depth understanding of the nuances of
-                mineral export. We have honed our expertise over the years,
-                allowing us to navigate the complexities of international
-                markets and supply chains with confidence.
-              </p>
-            </div>
-            <div className="mt-[7px]">
-              <h1 className="font-bold">Diverse Range if Minerals:</h1>
-              <p className="w-full">
-                Our portfolio includes a diverse range of minerals, each
-                tailored to specific industrial applications. We provide
-                detailed information about the minerals we deal with, their
-                applications, and the industries they serve. Whether it is
-                minerals used in construction, manufacturing, or other sectors,
-                we have you covered. By understanding the unique properties and
-                uses of these minerals, we are well-equipped to meet your
-                specific needs.
-              </p>
-            </div>
-          </div>
-          <div className="mt-[7px]">
-            <h1 className="font-bold">
-              Quality, Reliability, and Ethical Sourcing:
-            </h1>
-            <p className="">
-              Quality and reliability are at the core of our mineral export
-              services. We uphold the highest standards in sourcing, handling,
-              and delivering these minerals to our clients.{" "}
-              <span className="hidden lg:block">
-                Our commitment to ethical sourcing practices not only ensures
-                the sustainability of these resources but also helps us build
-                trust with our clients. We recognize the importance of
-                responsible mineral sourcing in todays global market, and we are
-                dedicated to making a positive impact.
-              </span>
-            </p>
-          </div>
-        </div>
       </div>
       </div>
     </div>

@@ -150,18 +150,22 @@ const Contact = () => {
              Let&#39;s get in touch!
           </p>
           <div className="flex flex-col gap-5 bg-gradient-to-b from-[#ece6ef] via-[#cfd3d1] to-[#ece6ef]  rounded-2xl p-10 w-60 ">
-           <div className="flex flex-row gap-5">
-             <img className="w-4 h-4" src={phone} alt="phone_icon" />
-            <p className="font-poppins">Phone</p>
-               </div>
-               <p className="font-poppins font-bold">+61 236-788-429</p>
-             </div>
+            <div className="flex flex-row gap-5">
+              <img className="w-4 h-4" src={phone} alt="phone_icon" />
+              <p className="font-poppins">Phone</p>
+            </div>
+                <p className="font-poppins font-bold">+251903876666</p>
+                <p className="font-poppins font-bold">+251921409206</p>
+            </div>
+             
             <div className="flex flex-col gap-5 bg-gradient-to-b from-[#ece6ef] via-[#cfd3d1] to-[#ece6ef]  rounded-2xl p-10 w-60">
               <div className="flex flex-row gap-5">
                 <img className="w-4 h-4" src={email} alt="email_icon" />
                 <p className="font-poppins">Email</p>
               </div>
-              <p className="font-poppins font-bold">support@gmail.com</p>
+              <a href="mailto:contact@innovest-africa-business-group.com" className="flex flex-row gap-5" >
+                <p className="font-poppins font-bold">contact@innovest-africa-business-group.com</p>
+              </a>
             </div>
          </div>
          <div className="flex flex-col min-w-screen"></div>

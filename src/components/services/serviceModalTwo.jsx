@@ -1,7 +1,7 @@
 import { AiOutlineClose } from "react-icons/ai";
 
-import img1 from "../../assets/images/services/coffee.avif";
-import img2 from "../../assets/images/services/cofe.jpg";
+import img1 from "../../assets/images/services/cofeeexp.jpeg";
+import img2 from "../../assets/images/services/Ethiopian-Coffee.jpg";
 import img3 from "../../assets/images/services/cofee.jpg";
 
 const ServiceModalTwo = ({onClose}) => {
@@ -40,7 +40,7 @@ const ServiceModalTwo = ({onClose}) => {
           <div className="">
             <div className="lg:mb-4 ">
               <h1 className="font-bold">
-              Premium Coffee Bean Excellence:
+              Premium Coffee, Oil Seed and Sessame Seed Bean Excellence:
               </h1>
               <p className="">
               Elevate your coffee experience with our premium-grade coffee beans. 
@@ -64,7 +64,7 @@ const ServiceModalTwo = ({onClose}) => {
             Trusted Partner in the Coffee Industry:
             </h1>
             <p className="">
-            Entrust your coffee needs to a reliable partner in the industry. 
+            Entrust your coffee, oil seed and other needs to a reliable partner in the industry. 
             We go beyond just exporting premium coffee beans; we establish trust. 
             Our adherence to international standards ensures that our beans not only meet 
             regulations but also surpass expectations. Whether you're a coffee roaster, 
@@ -73,51 +73,9 @@ const ServiceModalTwo = ({onClose}) => {
             </p>
           </div>
         </div>
-        <div className="text-[11px] lg:text-[13px] py-3 lg:hidden">
-          <div className="">
-            <div className="lg:mb-4">
-              <h1 className="font-bold">
-                Expertise in Export and Distribution:
-              </h1>
-              <p className="">
-                Our team possesses an in-depth understanding of the nuances of
-                mineral export. We have honed our expertise over the years,
-                allowing us to navigate the complexities of international
-                markets and supply chains with confidence.
-              </p>
-            </div>
-            <div className="mt-[7px]">
-              <h1 className="font-bold">Diverse Range if Minerals:</h1>
-              <p className="w-full">
-                Our portfolio includes a diverse range of minerals, each
-                tailored to specific industrial applications. We provide
-                detailed information about the minerals we deal with, their
-                applications, and the industries they serve. Whether it is
-                minerals used in construction, manufacturing, or other sectors,
-                we have you covered. By understanding the unique properties and
-                uses of these minerals, we are well-equipped to meet your
-                specific needs.
-              </p>
-            </div>
-          </div>
-          <div className="mt-[7px]">
-            <h1 className="font-bold">
-              Quality, Reliability, and Ethical Sourcing:
-            </h1>
-            <p className="">
-              Quality and reliability are at the core of our mineral export
-              services. We uphold the highest standards in sourcing, handling,
-              and delivering these minerals to our clients.{" "}
-              <span className="hidden lg:block">
-                Our commitment to ethical sourcing practices not only ensures
-                the sustainability of these resources but also helps us build
-                trust with our clients. We recognize the importance of
-                responsible mineral sourcing in todays global market, and we are
-                dedicated to making a positive impact.
-              </span>
-            </p>
-          </div>
-        </div>
+       
+          
+        
       </div>
       </div>
     </div>

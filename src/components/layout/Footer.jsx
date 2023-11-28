@@ -60,7 +60,7 @@ const Footer = () => {
               <div className="ml-4 md:font-medium font-normal md:text-lg text-base">
                 {" "}
                 <p className="mb-6 font-bold text-xl">Innovest Africa Business Group</p>
-                <p>Importing and Exporting Industry.</p>
+                {/* <p>Importing and Exporting Industry.</p> */}
               </div>
             </div>
             <div className="md:ml-0 ml-8">
@@ -79,15 +79,18 @@ const Footer = () => {
               <h2 className="mb-6 font-bold text-lg">Contact Us</h2>
               <ul className="font-medium">
                 <li className="mb-4">
-                  <p>
+                  {/* <p>
                   Inspiring innovation,  
                   <br></br>Driving Investment,{" "}
                     <br />
                     Empowering Growth.{" "}
-                  </p>
+                  </p> */}
                 </li>
                 <li>
-                  <p>+251903876666</p>
+                  <p>Istanbul, Turkey</p>
+                </li>
+                <li>
+                  <p>Bole  Addis Ababa, Ethiopia</p>
                 </li>
               </ul>
             </div>
@@ -97,7 +100,7 @@ const Footer = () => {
 
           <div className="text-center mt-8">
             <small className="text-md text-gray-500">
-            Made with ❤ at {' '}
+            Developed at {' '}
               <span>
                 <a href="https://upsurge.com.et/" className="hover:underline">
                  Upsurge Tech 

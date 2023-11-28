@@ -1,6 +1,6 @@
 import { React, useState, useEffect } from 'react'
 import logo from "../../assets/images/home/logo.png";
-import logoW from "../../assets/images/home/logowhite.jpg";
+import logoW from "../../assets/images/home/logoWW.png";
 const NavBar = () => {
   const links = [
     { name: 'Home', to: '#' },
@@ -49,9 +49,9 @@ const NavBar = () => {
           <div className=' mt-'>
           <a href="/#" className="flex items-center">
             <img
-              src={logo}
-              width={100}
-              height={140}
+              src={scrolling ? logo : logoW}
+              width={150}
+              height={150}
               alt="africa bussiness group logo"
 
             />
