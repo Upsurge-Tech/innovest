@@ -9,22 +9,23 @@ import Services from './components//services/index.jsx'
 import TeamSection from './components/team/team_section.jsx'
 import Footer from './components/layout/Footer.jsx'
 import './App.css';
+import NewServices from "./components/new_service/NewService.js";
+
 
 function App() {
   return (
     <>
-    <NavBar />
-    <HomePage  videoId={`yY13Y9a3Naw?si=zllhESflJ389kGs-`}/>
-    <About />
-    <OurMissionAndVision/>
-    <TeamSection/>
-    <Services/>
-    <Partners/>
-    <Contact/>
-    <Footer />
-    
+      <NavBar />
+      <HomePage videoId={`yY13Y9a3Naw?si=zllhESflJ389kGs-`} />
+      <About />
+      <OurMissionAndVision />
+      <TeamSection />
+      {/* <Services /> */}
+      <NewServices />
+      <Partners />
+      <Contact />
+      <Footer />
     </>
-    
   );
 }
 
