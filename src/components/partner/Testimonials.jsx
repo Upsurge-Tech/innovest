@@ -49,7 +49,7 @@ const Testimonilas = () => {
         </div>
       </motion.div> */}
 
-      <div className="ml-36">
+      <div id='#testimonials' className="ml-36">
         <div className="grid grid-cols-3 gap-20 overflow-hidden">
           <motion.h2
             className="text-5xl font-extrabold text-[#00407B] col-span-1"

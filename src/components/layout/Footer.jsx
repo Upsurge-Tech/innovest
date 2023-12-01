@@ -25,10 +25,10 @@ const Footer = () => {
     { name: "Testimonials", to: "#testimonials" },
   ];
   return (
-    <div>
+    <div className="">
       <footer className="">
         <hr className="border-gray-300 sm:mx-auto lg:my-4" />
-        <div className="mx-auto flex items-centers mr-4 ml-4">
+        <div className="mx-auto flex items-centers mr-4 ml-4 pt-[30px]">
           <div className="flex flex-row space-x-6 sm:space-x-8 items-center mx-auto flex-wrap ">
             {socialMediaLinks.map((item, index) => (
               <a
@@ -37,7 +37,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <div className="rounded-full shadow-[rgba(50,50,93,0.25)_0px_6px_30px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] py-4 px-4 sm:py-5 sm:px-5 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-125 duration-500">
+                <div className="rounded-full shadow-[rgba(50,50,93,0.25)_0px_6px_30px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] py-4 px-4 sm:py-5 sm:px-5 transition ease-in-out delay-10 hover:-translate-y-2 hover:bg-[#000] hover:text-white hover:scale-125 duration-500">
                   <item.icon
                     width={50}
                     height={50}

@@ -26,7 +26,7 @@ const NewService = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
   const [activeCard, setActiveCard] = useState("div_1");
   const [activeClick, setActive] = useState(1);
-  const xValue = isMobile ? 50 : 200;
+  const xValue = isMobile ? 100 : 200;
 
   const handleCardHover = (card) => {
     setActiveCard(card);
@@ -37,9 +37,9 @@ const NewService = () => {
       id="newService"
       className="bg-[#ece9e9] md:py-8 py-6 mt-8 overflow-hidden"
     >
-      <div className="md:py-12 md:grid md:grid-cols-3 md:gap-20 overflow-hidden">
+      <div className="md:py-12 grid grid-cols-3 gap-20 overflow-hidden">
         <motion.h2
-          className="md:text-5xl text-4xl font-extrabold text-[#00407B] md:col-span-1"
+          className="text-5xl font-extrabold text-[#00407B] col-span-1"
           initial={{ x: -100 }}
           whileInView={{ x: xValue, transition: { duration: 1 } }}
         >
