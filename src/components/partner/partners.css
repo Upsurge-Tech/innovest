@@ -1,0 +1,22 @@
+
+.swiperp {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+.swiper-slidep {
+  text-align: center;
+  /* font-size: 15px; */
+
+  /* Center slide text vertically */
+  display: flex;
+  background: transparent;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiperp {
+  margin-left: auto;
+  margin-right: auto;
+}
