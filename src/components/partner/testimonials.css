@@ -1,0 +1,46 @@
+body {
+  background: #eee;
+  font-family: Poppins, Helvetica Neue, Helvetica, Arial, sans-serif;
+  /* font-size: 14px; */
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swipert {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slidet {
+  /* text-align: center; */
+  /* font-size: 15px; */
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+
+.swiper-slidet img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swipert {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50;
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+.swiper-pagination {
+  margin-bottom: 0px; /* Adjust the value according to your needs */
+}
+.swiper-container-free-mode > .swiper-wrapper {
+  -webkit-transition-timing-function: linear !important;
+  transition-timing-function: linear !important;
+}

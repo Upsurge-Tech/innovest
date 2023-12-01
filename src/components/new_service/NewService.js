@@ -33,7 +33,11 @@ const NewService = () => {
   };
 
   return (
+<<<<<<< HEAD
     <div id="newService" className="bg-[#ece9e9] md:py-8 py-6 mt-8 overflow-hidden">
+=======
+    <div className="bg-[#ece9e9] md:py-8 py-6 mt-8 overflow-hidden">
+>>>>>>> daa2183dbe6306a307d9a820bb3cc4123229b9ab
       <div className="w-full md:mb-20">
         <motion.div
           className=""
