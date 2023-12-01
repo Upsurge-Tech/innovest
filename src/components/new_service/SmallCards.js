@@ -31,7 +31,7 @@ const SmallCards = ({
 
   return (
     <div
-      className={`my-10 md:w-2/3 w-5/6 mx-auto rounded-3xl hover:bg-[#000] hover:text-[#fff] text-black bg-white shadow-2xl transition-all py-2 ${prop} `}
+      className={`my-10 md:w-2/3 w-5/6 md:h-[90px] mx-auto rounded-3xl hover:bg-[#000] hover:text-[#fff] text-black bg-white shadow-2xl transition-all py-2 ${prop} transform transition-transform hover:scale-105 `}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       onClick={handleClick}
