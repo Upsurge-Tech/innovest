@@ -37,11 +37,11 @@ const SmallCards = ({
       onClick={handleClick}
     >
       <div className="">
-        <div className="flex py-4 mx-auto w-5/6">
-          <div className="basis-1/4">
+        <div className="flex py-4 mx-auto w-5/6 md:gap-x-0 gap-x-3">
+          <div className="basis-1/4 flex items-center justify-center">
             <img src={image} alt="imageHere" className="h-10 w-14" />
           </div>
-          <div className="basis-3/4">{paragraph}</div>
+          <div className="basis-3/4 flex justify-center item-center">{paragraph}</div>
         </div>
       </div>
     </div>
