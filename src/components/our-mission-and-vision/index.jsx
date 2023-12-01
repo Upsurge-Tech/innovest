@@ -48,8 +48,8 @@ const OurMissionAndVision = () => {
         <div className="mt-28 hidden xl:block">
           <motion.img
             src={market}
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1, transition: { duration: 1.5 } }}
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, transition: { duration: 1.5 }, x: -40 }}
           />
         </div>
         <div>
