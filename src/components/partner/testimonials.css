@@ -1,7 +1,6 @@
 body {
   background: #eee;
   font-family: Poppins, Helvetica Neue, Helvetica, Arial, sans-serif;
-  /* font-size: 14px; */
   color: #000;
   margin: 0;
   padding: 0;
@@ -13,14 +12,8 @@ body {
 }
 
 .swiper-slidet {
-  /* text-align: center; */
-  /* font-size: 15px; */
   background: #fff;
-
-  /* Center slide text vertically */
   display: flex;
-  /* justify-content: center; */
-  /* align-items: center; */
 }
 
 .swiper-slidet img {
@@ -37,9 +30,7 @@ body {
   overflow-x: hidden;
   overflow-y: visible;
 }
-.swiper-pagination {
-  margin-bottom: 0px; /* Adjust the value according to your needs */
-}
+
 .swiper-container-free-mode > .swiper-wrapper {
   -webkit-transition-timing-function: linear !important;
   transition-timing-function: linear !important;

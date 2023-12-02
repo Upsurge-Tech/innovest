@@ -1,4 +1,3 @@
-
 .swiperp {
   width: 100%;
   height: 100%;
@@ -7,9 +6,6 @@
 
 .swiper-slidep {
   text-align: center;
-  /* font-size: 15px; */
-
-  /* Center slide text vertically */
   display: flex;
   background: transparent;
   justify-content: center;
