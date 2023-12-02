@@ -26,30 +26,34 @@ const NewService = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
   const [activeCard, setActiveCard] = useState("div_1");
   const [activeClick, setActive] = useState(1);
-  const xValue = isMobile ? 0 : 300;
+  const xValue = isMobile ? 50 : 200;
 
   const handleCardHover = (card) => {
     setActiveCard(card);
   };
 
   return (
-    <div className="bg-[#ece9e9] md:py-8 py-6 mt-8 overflow-hidden">
-      <div className="w-full md:mb-20">
-        <motion.div
-          className=""
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.8 }}
-          variants={{
-            hidden: { opacity: 0, x: -50 },
-            visible: { opacity: 1, x: xValue },
-          }}
+    <div
+      id="newService"
+      className="bg-[#ece9e9] md:py-8 py-6 mt-8 overflow-hidden"
+    >
+      <div className="md:py-12 md:grid md:grid-cols-3 md:gap-20 overflow-hidden">
+        <motion.h2
+          className="md:text-5xl text-4xl font-extrabold text-[#00407B] md:col-span-1"
+          initial={{ x: -100 }}
+          whileInView={{ x: xValue, transition: { duration: 1 } }}
         >
-          <h1 className="text-[#00407B] font-bold md:text-[50px] text-[30px] md:py-4 pl-6">
-            Services
-          </h1>
-        </motion.div>
+          Service
+        </motion.h2>
+        {isMobile ? (
+          " "
+        ) : (
+          <motion.div
+            className="col-span-2 h-10 bg-black w-full mt-1"
+            initial={{ x: 400 }}
+            whileInView={{ x: 0, transition: { duration: 1 } }}
+          ></motion.div>
+        )}
       </div>
       <div className="md:flex md:justify-between md:w-5/6 mx-auto w-full">
         <div className="basis-1/2 md:py-10">
