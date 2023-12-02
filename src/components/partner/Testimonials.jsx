@@ -5,6 +5,7 @@ import "swiper/css/navigation";
 import "./testimonials.css";
 import { Pagination, Autoplay } from "swiper/modules";
 import { motion } from "framer-motion";
+import { useMediaQuery } from "react-responsive";
 
 const testimonialsData = [
   {
@@ -34,41 +35,47 @@ const testimonialsData = [
   },
 ];
 const Testimonilas = () => {
+  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+  const xValue = isMobile ? 0 : 100;
   return (
     <>
-      {/* <motion.div
-        className="ml-36"
-        initial={{ x: -400 }}
-        whileInView={{ x: 0, transition: { duration: 1 } }}
-      >
-        <div className="grid grid-cols-3 gap-20">
-          <h2 className="text-5xl font-extrabold text-[#00407B] col-span-1">
-            Testimonials
-          </h2>
-          <div className="col-span-2 h-10 bg-black w-full mt-1"></div>
-        </div>
-      </motion.div> */}
-
-      <div id='#testimonials' className="ml-36">
-        <div className="grid grid-cols-3 gap-20 overflow-hidden">
+      <div className="ml-8 mt-12 sm:mt-20">
+        <div className="grid grid-cols-3 overflow-hidden ">
           <motion.h2
-            className="text-5xl font-extrabold text-[#00407B] col-span-1"
+            className="text-2xl md:text-3xl lg:4xl xl:text-5xl font-extrabold text-[#00407B] col-span-3 sm:col-span-1"
             initial={{ x: -100 }}
-            whileInView={{ x: 0, transition: { duration: 1 } }}
+            whileInView={{ x: xValue, transition: { duration: 1 } }}
           >
             Testimonials
           </motion.h2>
           <motion.div
-            className="col-span-2 h-10 bg-black w-full mt-1"
+            className="sm:col-span-2 h-10 bg-black w-full mt-1 hidden sm:block"
             initial={{ x: 400 }}
-            whileInView={{ x: 0, transition: { duration: 1 } }}
+            whileInView={{ x: xValue, transition: { duration: 1 } }}
           ></motion.div>
         </div>
       </div>
 
-      <div className="mx-36 my-20">
+      <div className="lg:mx-36 my-20">
         <Swiper
-          slidesPerView={3}
+          slidesPerView={1}
+          breakpoints={{
+            // when window width is >= 320px
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            // when window width is >= 480px
+            480: {
+              slidesPerView: 2,
+              spaceBetween: 30,
+            },
+            // when window width is >= 640px
+            640: {
+              slidesPerView: 3,
+              spaceBetween: 40,
+            },
+          }}
           spaceBetween={40}
           loop={true}
           pagination={{

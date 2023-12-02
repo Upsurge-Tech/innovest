@@ -5,9 +5,7 @@ import "swiper/css/navigation";
 import "./partners.css";
 import { Autoplay } from "swiper/modules";
 import black from "../../assets/images/testimonials/Black.png";
-import one from "../../assets/images/team-members/noal.jpg";
-import two from "../../assets/images/team-members/beki.jpg";
-import three from "../../assets/images/team-members/musa.jpg";
+
 
 const Partners = () => {
   const partnersLogo = [
@@ -25,8 +23,25 @@ const Partners = () => {
     <>
       <div className="">
         <Swiper
-          slidesPerView={5}
+          slidesPerView={2}
           spaceBetween={30}
+          breakpoints={{
+            // when window width is >= 320px
+            320: {
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
+            // when window width is >= 480px
+            480: {
+              slidesPerView: 4,
+              spaceBetween: 30,
+            },
+            // when window width is >= 640px
+            640: {
+              slidesPerView: 5,
+              spaceBetween: 40,
+            },
+          }}
           loop={true}
           autoplay={{
             delay: 0,

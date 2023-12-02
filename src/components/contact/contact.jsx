@@ -1,109 +1,9 @@
-// import React from "react";
-// import phone from "../../assets/images/contact/Phone.png";
-// import email from "../../assets/images/contact/email.png";
-
-
-// const Contact = () => {
-//   return (
-//     <main id="contact" className="  min-w-screen  ">
-//       <div className="  flex flex-col min-w-screen">
-//         <div className=" h-32 min-w-screen bg-black text-white flex flex-col items-center justify-center gap-5">
-//           <div className="w-14 border-b-4 border-solid border-[#00407B]"></div>
-//           <div className="text-2xl font-inter">Contact Us</div>
-//         </div>
-
-//         <div className="flex flex-col lg:flex-row pr-10 md:pr-20 pb-20 pt-10 pl-10 lg:pl-0 gap-10">
-//           <div className="flex flex-col  sm:flex-row lg:flex-col w-2/4 gap-5 p-3 md:p-20  ">
-//             <p className="text-3xl font-bold font-inter">
-//               Let&#39;s get in touch!
-//             </p>
-//             <div className="flex flex-col gap-5 bg-gradient-to-b from-[#ece6ef] via-[#cfd3d1] to-[#ece6ef]  rounded-2xl p-10 w-60 ">
-//               <div className="flex flex-row gap-5">
-//                 <img className="w-4 h-4" src={phone} alt="phone_icon" />
-//                 <p className="font-poppins">Phone</p>
-//               </div>
-//               <p className="font-poppins font-bold">+61 236-788-429</p>
-//             </div>
-//             <div className="flex flex-col gap-5 bg-gradient-to-b from-[#ece6ef] via-[#cfd3d1] to-[#ece6ef]  rounded-2xl p-10 w-60">
-//               <div className="flex flex-row gap-5">
-//                 <img className="w-4 h-4" src={email} alt="email_icon" />
-//                 <p className="font-poppins">Email</p>
-//               </div>
-//               <p className="font-poppins font-bold">support@gmail.com</p>
-//             </div>
-//           </div>
-
-
-//           <div className="flex flex-col w-full h-full p-10 gap-3   bg-gradient-to-b from-[#e2e2e3] via-[#d1d1d1] to-[#e6e5e7] rounded-2xl ">
-//             <p className="flex font-bold text-4xl font-inter">
-//               Send Us A Message
-//             </p>
-//             <p className="flex  text-lg font-poppins">
-//               Have any questions regarding our services? Send us your message.
-//             </p>
-//             <form className="flex flex-col gap-10">
-//               <div className="flex flex-col md:flex-col gap-10">
-//                 <div className="flex flex-col gap-3">
-//                   <label htmlFor="#name" className="font-bold font-poppins">
-//                     Name
-//                   </label>
-//                   <input
-//                     className="flex p-3 rounded-2xl "
-//                     placeholder="Enter your Phone"
-//                     type={"text"}
-//                     id="name"
-//                     name="name"
-//                   />
-//                 </div>
-//                 <div className="flex flex-col gap-3">
-//                   <label htmlFor="#email" className="font-bold font-poppins">
-//                     Email
-//                   </label>
-//                   <input
-//                     className="flex p-3 rounded-2xl "
-//                     placeholder="Enter your Email"
-//                     type={"text"}
-//                     id="email"
-//                     name="email"
-//                   />
-//                 </div>{" "}
-//               </div>
-//               <div className="flex flex-col ">
-//                 <label htmlFor="#message" className="font-bold font-poppins">
-//                   Message
-//                 </label>
-//                 <input
-//                   className="flex p-14  rounded-2xl"
-//                   placeholder="Enter your message"
-//                   type={"text"}
-//                   id="message"
-//                   name="message"
-//                 />
-//               </div>
-//               <div className="flex justify-end items-end  ">
-//                 <button
-//                   className="p-5 rounded-3xl font-poppins text-white bg-[#11112B]"
-//                   type="submit"
-//                 >
-//                   Submit
-//                 </button>
-//               </div>
-//             </form>
-//           </div>
-//         </div>
-//       </div>
-//     </main>
-//   );
-// };
-
-// export default Contact;
-
-// ... (previous imports)
-
 import React, { useState } from "react";
-import emailjs from "emailjs-com";
-import phone from "../../assets/images/contact/Phone.png";
-import email from "../../assets/images/contact/email.png";
+import { motion } from "framer-motion";
+import contact from "../../assets/images/contact/contact.png";
+import { MdEmail } from "react-icons/md";
+import { BiSolidPhoneCall } from "react-icons/bi";
+import { useMediaQuery } from "react-responsive";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -111,66 +11,121 @@ const Contact = () => {
     email: "",
     message: "",
   });
+  const [errors, setErrors] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+  const xValue = isMobile ? 0 : 100;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
+    if (!formData.email) {
+      setErrors((prevData) => ({ ...prevData, email: "Email is required" }));
+      return;
+    }
+    if (!formData.message) {
+      setErrors((prevData) => ({
+        ...prevData,
+        message: "Message is required",
+      }));
+      return;
+    }
 
-    emailjs.sendForm("your_service_id", "your_template_id", formData, "your_user_id")
-      .then(
-        (result) => {
-          console.log(result.text);
-          // You can handle success (e.g., show a success message)
-        },
-        (error) => {
-          console.log(error.text);
-          // Handle error (e.g., show an error message)
+    const emailData = {
+      email: formData.email,
+      subject: "Contact Form Submission",
+      message: formData.message,
+    };
+
+    try {
+      const response = await fetch(
+        "https://innovest-back-email-service-kfe3.onrender.com/mail/receiveMail",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(emailData),
         }
       );
 
+      if (response.ok) {
+        console.log("Email sent successfully");
+        // You can handle success (e.g., show a success message)
+      } else {
+        console.log("Failed to send email");
+        // Handle error (e.g., show an error message)
+      }
+    } catch (error) {
+      console.error("Error sending email", error);
+      // Handle error (e.g., show an error message)
+    }
+
     // Clear the form after sending the email
     setFormData({ name: "", email: "", message: "" });
+    setErrors({ name: "", email: "", message: "" });
   };
 
   return (
-    <main id="contact" className="min-w-screen pt-16 mt-8">
-      
-        {/* ... (previous content) */}
-        <div className=" h-32 min-w-screen bg-black text-white flex flex-col items-center justify-center gap-5">
-          <div className="w-14 border-b-4 border-solid border-[#00407B]"></div>
-          <div className="text-2xl font-inter">Contact Us</div>
-         </div>
-        <div className="flex flex-col lg:flex-row pr-10 md:pr-20 pb-20 pt-10 pl-10 lg:pl-0 gap-10">
-           <div className="flex flex-col  sm:flex-row lg:flex-col w-2/4 gap-5 p-3 md:p-20  ">
-           <p className="text-3xl font-bold font-inter">
-             Let&#39;s get in touch!
-          </p>
-          <div className="flex flex-col gap-5 bg-gradient-to-b from-[#ece6ef] via-[#cfd3d1] to-[#ece6ef]  rounded-2xl p-10 w-60 ">
-            <div className="flex flex-row gap-5">
-              <img className="w-4 h-4" src={phone} alt="phone_icon" />
-              <p className="font-poppins">Phone</p>
-            </div>
-                <p className="font-poppins font-bold">+251903876666</p>
-                <p className="font-poppins font-bold">+251921409206</p>
-            </div>
-             
-            <div className="flex flex-col gap-5 bg-gradient-to-b from-[#ece6ef] via-[#cfd3d1] to-[#ece6ef]  rounded-2xl p-10 w-60">
-              <div className="flex flex-row gap-5">
-                <img className="w-4 h-4" src={email} alt="email_icon" />
-                <p className="font-poppins">Email</p>
+    <main id="contact" className="min-w-screen pt-16 mt-16">
+      {/* ... (previous content) */}
+      <motion.div className="grid grid-cols-3 overflow-hidden ml-8">
+        <motion.h2
+          className="text-2xl md:text-3xl lg:text-5xl font-extrabold text-[#00407B] col-span-3 sm:col-span-1"
+          initial={{ x: -100 }}
+          whileInView={{ x: xValue, transition: { duration: 1 } }}
+        >
+          Contact Us
+        </motion.h2>
+        <motion.div
+          className="sm:col-span-2 h-10 bg-black w-full mt-1 hidden sm:block"
+          initial={{ x: 400 }}
+          whileInView={{ x: xValue, transition: { duration: 1 } }}
+        ></motion.div>
+      </motion.div>
+      <div className="flex flex-col lg:flex-row pr-8 md:pr-16 pb-20 pt-10  lg:pl-0 mt-4 sm:mt-12 gap-5 ml-8 sm:ml-20 md:ml-32">
+        <div className="flex flex-col sm:flex-row lg:flex-col lg:w-1/3">
+          <div className="lg:relative">
+            <img src={contact} className="hidden lg:block" alt="contact us" />
+
+            <div className="flex flex-col gap-3 bg-white rounded-2xl p-7 py-8 px-4 lg:absolute lg:-bottom-32 w-full">
+              <h2 className="font-bold text-xl sm:text-2xl">
+                Contact Information
+              </h2>
+              <div className="flex flex-col lg:flex-col xl:flex-row justify-between mt-4">
+                <div className="flex flex-row gap-3">
+                  <BiSolidPhoneCall size={20} />
+                  <p className="font-poppins">+1012 3456 789</p>
+                </div>
+                <div className="flex flex-row gap-3">
+                  <BiSolidPhoneCall size={20} />
+                  <p className="font-poppins">+1012 3456 789</p>
+                </div>
               </div>
-              <a href="mailto:contact@innovest-africa-business-group.com" className="flex flex-row gap-5" >
-                <p className="font-poppins font-bold">contact@innovest-africa-business-group.com</p>
-              </a>
+              <div className="flex flex-row gap-3 mt-4">
+                <MdEmail size={20} />
+                <a
+                  href="mailto:contact@innovest-africa-business-group.com"
+                  className="flex flex-row gap-5"
+                >
+                  <p className="font-poppins">
+                    contact@innovest-africa-business-group.com
+                  </p>
+                </a>
+              </div>
             </div>
-         </div>
-         <div className="flex flex-col min-w-screen"></div>
-        <div className="flex flex-col w-full h-full p-10 gap-3 bg-gradient-to-b from-[#e2e2e3] via-[#d1d1d1] to-[#e6e5e7] rounded-2xl">
-          <p className="flex font-bold text-4xl font-inter">
+          </div>
+        </div>
+        <div className="flex flex-col min-w-screen"></div>
+        <div className="flex flex-col lg:w-7/12 p-10 gap-3 bg-white rounded-2xl">
+          <p className="flex font-bold text-2xl sm:text-3xl md:text-4xl font-inter">
             Send Us A Message
           </p>
           <p className="flex text-lg font-poppins">
@@ -179,12 +134,12 @@ const Contact = () => {
           <form className="flex flex-col gap-10" onSubmit={sendEmail}>
             <div className="flex flex-col md:flex-col gap-10">
               <div className="flex flex-col gap-3">
-                <label htmlFor="name" className="font-bold font-poppins">
+                <label htmlFor="name" className="font-extrabold font-poppins">
                   Name
                 </label>
                 <input
-                  className="flex p-3 rounded-2xl"
-                  placeholder="Enter your Name"
+                  className="flex p-5 rounded-2xl bg-[#DDDDDD] focus:outline-none"
+                  placeholder="Enter your Name ..."
                   type="text"
                   id="name"
                   name="name"
@@ -192,38 +147,46 @@ const Contact = () => {
                   onChange={handleChange}
                 />
               </div>
+
               <div className="flex flex-col gap-3">
                 <label htmlFor="email" className="font-bold font-poppins">
                   Email
                 </label>
                 <input
-                  className="flex p-3 rounded-2xl"
-                  placeholder="Enter your Email"
+                  className="flex p-5 rounded-2xl bg-[#DDDDDD] focus:outline-none"
+                  placeholder="Enter your Email Address ..."
                   type="email"
                   id="email"
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
                 />
+                {errors.email && (
+                  <div className="text-red-500">{errors.email}</div>
+                )}
               </div>
+
               <div className="flex flex-col gap-3">
                 <label htmlFor="message" className="font-bold font-poppins">
                   Message
                 </label>
-                <input
-                  className="flex p-12 rounded-2xl"
-                  placeholder="Enter your Message"
+                <textarea
+                  className="flex px-5 py-8 rounded-2xl bg-[#DDDDDD] h-44 focus:outline-none"
+                  placeholder="Enter your Message ..."
                   type="text"
                   id="message"
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
                 />
+                {errors.message && (
+                  <div className="text-red-500">{errors.message}</div>
+                )}
               </div>
               {/* ... (other form fields) */}
-              <div className="flex justify-end items-end">
+              <div className="flex justify-center items-end">
                 <button
-                  className="p-5 rounded-3xl font-poppins text-white bg-[#11112B]"
+                  className="focus:ring-4 focus:outline-none uppercase focus:ring-blue-300 font-medium rounded-lg  px-8 py-3 text-center border border-primary ml-4 md:ml-8 bg-gradient-to-r from-[#100F36] to-[#1063DF] text-white"
                   type="submit"
                 >
                   Submit
@@ -233,10 +196,8 @@ const Contact = () => {
           </form>
         </div>
       </div>
-      
     </main>
   );
 };
 
 export default Contact;
-
