@@ -90,8 +90,8 @@ const Contact = () => {
           whileInView={{ x: xValue, transition: { duration: 1 } }}
         ></motion.div>
       </motion.div>
-      <div className="flex flex-col lg:flex-row pr-8 md:pr-16 pb-20 pt-10  lg:pl-0 mt-4 sm:mt-12 gap-5 ml-8 sm:ml-20 md:ml-32">
-        <div className="flex flex-col sm:flex-row lg:flex-col lg:w-1/3">
+      <div className="flex flex-col lg:flex-row pr-8 md:pr-16 pb-20 pt-10  lg:pl-0 mt-4 sm:mt-12 gap-5 ml-8 sm:ml-20 md:ml-32 lg:space-x-8">
+        <div className="flex flex-col sm:flex-row lg:flex-col ">
           <div className="lg:relative">
             <img src={contact} className="hidden lg:block" alt="contact us" />
 
@@ -124,7 +124,7 @@ const Contact = () => {
           </div>
         </div>
         <div className="flex flex-col min-w-screen"></div>
-        <div className="flex flex-col lg:w-7/12 p-10 gap-3 bg-white rounded-2xl">
+        <div className="flex flex-col lg:w-6/12 p-10 gap-3 bg-white rounded-2xl">
           <p className="flex font-bold text-2xl sm:text-3xl md:text-4xl font-inter">
             Send Us A Message
           </p>
