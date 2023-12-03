@@ -32,18 +32,12 @@ const OurMissionAndVision = () => {
 
   return (
     <div className="pt-[2rem] md:ml-40 md:mr-16 ml-12 mr-8 ">
-      <div className="flex flex-col gap-[44px]">
-        <div className="flext flex-col space-y-3">
-          <img src={deco} />
-          <p className="text-2xl sm:text-3xl md:text-[35px]">
-            Know the Business
-          </p>
-          <h2 className="text-xl sm:text-3xl md:text-[35px] font-bold">
-            Our Vision and Mission
-          </h2>
+      
+      <div className="text-left flex-row mr-4 p-4 text-2xl text-left sm:text-[25px] mb-4 md:mb-12 text-gray-900">
+        <img src={deco} />
+          <h2 className="">Know the Business</h2>
+          <p className="text-gray-900 font-bold">We are Committed to</p>
         </div>
-        <br />
-      </div>
       <div className="flex flex-row flex-wrap justify-between">
         <div className="mt-28 hidden xl:block">
           <motion.img

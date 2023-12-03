@@ -27,11 +27,11 @@ const SmallCards = ({
     setActive(id);
   };
 
-  const prop = isActive ? "bg-[#000] text-[#fff]" : ""
+  const prop = isActive ? "bg-slate-700 text-[#fff]" : "text-black"
 
   return (
     <div
-      className={`my-10 md:w-2/3 w-5/6 md:h-[90px] mx-auto rounded-3xl hover:bg-[#000] hover:text-[#fff] text-black bg-white shadow-2xl transition-all py-2 ${prop} transform transition-transform hover:scale-105 `}
+      className={`my-10 md:w-2/3 w-5/6 md:h-[90px] mx-auto rounded-3xl hover:bg-slate-700 hover:text-[#fff] bg-white shadow-2xl transition-all py-2 ${prop} transform transition-transform hover:scale-105 `}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       onClick={handleClick}

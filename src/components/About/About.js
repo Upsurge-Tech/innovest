@@ -1,8 +1,13 @@
 import React from "react";
+// import React, { useState } from "react";
+import { motion } from "framer-motion";
 import Line from "../../assets/images/about/Line.png";
+
 import Innovation from "../../assets/images/about/Innovation.png";
 import Card from "./Card";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
+import { useMediaQuery } from "react-responsive";
+import deco from "../../assets/images/vision-and-mission/deco-line.svg";
 
 
    const doc1 = {
@@ -26,15 +31,29 @@ import { motion } from "framer-motion";
 
 
 const About = () => {
+
+  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+  const xValue = isMobile ? 50 : 200;
+
   return (
-    <div className="md:mb-20 mb-4">
-      <div className="md:py-12 py-8">
-        <div className="w-12 mx-auto">
-          <img src={Line} alt="line" className="w-fu;l" />
-        </div>
-        <h1 className="text-center font-bold md:text-[30px] text-[30px]">
-          About Us
-        </h1>
+    <div className="md:mb-20 mb-4 pt-12"  id = "about">
+      <div className="md:py-12 md:grid md:grid-cols-3 md:gap-20 overflow-hidden">
+        <motion.h2
+          className="md:text-5xl text-4xl font-extrabold text-[#00407B] md:col-span-1"
+          initial={{ x: -100 }}
+          whileInView={{ x: xValue, transition: { duration: 1 } }}
+        >
+          About
+        </motion.h2>
+        {isMobile ? (
+          " "
+        ) : (
+          <motion.div
+            className="col-span-2 h-10 bg-black w-full mt-1"
+            initial={{ x: 400 }}
+            whileInView={{ x: 0, transition: { duration: 1 } }}
+          ></motion.div>
+        )}
       </div>
       <motion.div
         className=""
@@ -47,14 +66,11 @@ const About = () => {
           visible: { opacity: 1, x: 0 },
         }}
       >
-        <div className="flex flex-col items-start justify-center md:ml-[170px] ml-6 md:mb-16 mb-10 text-[30px]">
-          <div className="w-12">
-            <img src={Line} alt="line" className="w-full" />
-          </div>
-          <p className="">
-            Know the Business <br />
-            <span className="font-bold">We are Committed to</span>
-          </p>
+      
+        <div className="text-left flex-row mr-4 p-4 text-2xl text-left sm:text-[25px] mb-4 md:mb-12 text-gray-900 md:ml-[200px] ml-6">
+        <img src={deco} />
+          <h2 className="">Know the Business</h2>
+          <p className="text-gray-900 font-bold">We are Committed to</p>
         </div>
       </motion.div>
       <div className="md:w-2/3 w-5/6 mx-auto flex flex-wrap gap-y-6 justify-between">
@@ -62,10 +78,10 @@ const About = () => {
           className=""
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.7 }}
+          // viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 1}}
           variants={{
-            hidden: { opacity: 0, y: 50 },
+            hidden: { opacity: 0, y: 100 },
             visible: { opacity: 1, y: 0 },
           }}
         >
@@ -79,10 +95,10 @@ const About = () => {
           className=""
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.7, delay: 0.2 }}
+          // viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 1, delay: 0.2 }}
           variants={{
-            hidden: { opacity: 0, y: 50 },
+            hidden: { opacity: 0, y: 100 },
             visible: { opacity: 1, y: 0 },
           }}
         >
@@ -96,10 +112,10 @@ const About = () => {
           className=""
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.7, delay: 0.3 }}
+          // viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 1, delay: 0.3}}
           variants={{
-            hidden: { opacity: 0, y: 50 },
+            hidden: { opacity: 0, y: 100 },
             visible: { opacity: 1, y: 0 },
           }}
         >

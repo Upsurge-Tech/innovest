@@ -57,6 +57,8 @@ import React from 'react';
 import one from "../../assets/images/team-members/noal.jpg";
 import two from "../../assets/images/team-members/beki.jpg";
 import three from "../../assets/images/team-members/musa.jpg";
+import deco from "../../assets/images/vision-and-mission/deco-line.svg";
+
 
 const TeamMember = ({ name, title, description, image }) => (
   <div className="group flex flex-col justify-center items-center">
@@ -80,10 +82,10 @@ const TeamSection = () => {
   return (
     <div className="sm:wd-12 from-gray-100">
       <div className="team-section max-w-6xl mx-auto h-full flex flex-col">
-        <div className="text-left flex-row mr-4 p-4 mt-16">
-          <hr className="border-t-2 border-pink-500 w-16 h-1 mb-2" />
-          <h2 className="text-2xl text-left sm:text-3xl mb-2 text-gray-900">Know the Business</h2>
-          <p className="text-lg sm:text-xl text-gray-900 font-bold">Our Team</p>
+        <div className="text-left flex-row mr-4 p-4 mt-16 text-2xl text-left sm:text-[25px] mb-2 text-gray-900 md:ml-10">
+        <img src={deco} />
+          <h2 className="">Know the Business</h2>
+          <p className="text-gray-900 font-bold">Our Team</p>
         </div>
 
         {/* <div className="mt-20 grid grid-cols-1 sm:grid-cols-3 gap-6"> */}
