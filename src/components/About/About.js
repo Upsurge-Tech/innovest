@@ -9,34 +9,31 @@ import Card from "./Card";
 import { useMediaQuery } from "react-responsive";
 import deco from "../../assets/images/vision-and-mission/deco-line.svg";
 
-
-   const doc1 = {
-     title: "Innovation",
-     paragraph:
-       "We are dedicated to fostering innovation, continuously seeking new and creative ",
-     image: Innovation,
-   };
-   const doc2 = {
-     title: "Innovation",
-     paragraph:
-       "We are dedicated to fostering innovation, continuously seeking new and creative ",
-     image: Innovation,
-   };
-   const doc3 = {
-     title: "Innovation",
-     paragraph:
-       "We are dedicated to fostering innovation, continuously seeking new and creative ",
-     image: Innovation,
-   }
-
+const doc1 = {
+  title: "Innovation",
+  paragraph:
+    "We are dedicated to fostering innovation, continuously seeking new and creative ",
+  image: Innovation,
+};
+const doc2 = {
+  title: "Innovation",
+  paragraph:
+    "We are dedicated to fostering innovation, continuously seeking new and creative ",
+  image: Innovation,
+};
+const doc3 = {
+  title: "Innovation",
+  paragraph:
+    "We are dedicated to fostering innovation, continuously seeking new and creative ",
+  image: Innovation,
+};
 
 const About = () => {
-
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
   const xValue = isMobile ? 50 : 200;
 
   return (
-    <div className="md:mb-20 mb-4 pt-12"  id = "about">
+    <div className="md:mb-20 mb-4 pt-12" id="about">
       <div className="md:py-12 md:grid md:grid-cols-3 md:gap-20 overflow-hidden">
         <motion.h2
           className="md:text-5xl text-4xl font-extrabold text-[#00407B] md:col-span-1"
@@ -66,9 +63,8 @@ const About = () => {
           visible: { opacity: 1, x: 0 },
         }}
       >
-      
-        <div className="text-left flex-row mr-4 p-4 text-2xl text-left sm:text-[25px] mb-4 md:mb-12 text-gray-900 md:ml-[200px] ml-6">
-        <img src={deco} />
+        <div className="flex-row mr-4 p-4 text-2xl text-left sm:text-[25px] mb-4 md:mb-12 text-gray-900 md:ml-[200px] ml-6">
+          <img src={deco} />
           <h2 className="">Know the Business</h2>
           <p className="text-gray-900 font-bold">We are Committed to</p>
         </div>
@@ -79,7 +75,7 @@ const About = () => {
           initial="hidden"
           whileInView="visible"
           // viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 1}}
+          transition={{ duration: 1 }}
           variants={{
             hidden: { opacity: 0, y: 100 },
             visible: { opacity: 1, y: 0 },
@@ -113,7 +109,7 @@ const About = () => {
           initial="hidden"
           whileInView="visible"
           // viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 1, delay: 0.3}}
+          transition={{ duration: 1, delay: 0.3 }}
           variants={{
             hidden: { opacity: 0, y: 100 },
             visible: { opacity: 1, y: 0 },
