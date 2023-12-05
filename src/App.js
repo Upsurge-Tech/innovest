@@ -10,9 +10,7 @@ import Footer from "./components/layout/Footer.jsx";
 import "./App.css";
 import NewServices from "./components/new_service/NewService.js";
 import Testimonials from "./components/partner/Testimonials.jsx";
-import About from './components/About/About.js'
-
-
+import About from "./components/About/About.js";
 
 function App() {
   return (
