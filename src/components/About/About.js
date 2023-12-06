@@ -64,7 +64,6 @@ const About = () => {
           visible: { opacity: 1, x: 0 },
         }}
       >
-
           <div className="flex-row mr-4 p-4 text-2xl text-left sm:text-[25px] mb-4 md:mb-12 text-gray-900 md:ml-[200px] ml-6 md:mt-0 mt-4">
             <img src={deco} />
             <h2 className="">Know the Business</h2>
