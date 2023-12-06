@@ -24,10 +24,10 @@ import { useMediaQuery } from "react-responsive";
 
 const NewService = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
-  const isSmall = window.innerWidth <= 790;
+  const isSmall = window.innerWidth <= 820;
   const [activeCard, setActiveCard] = useState("div_1");
   const [activeClick, setActive] = useState(1);
-  const xValue = isMobile ? 50 : 200;
+  const xValue = isSmall ? 50 : 200;
 
   const prop = "w-5/6 mx-auto";
   const prop2 = "md:flex md:justify-between md:w-5/6 mx-auto w-full";
