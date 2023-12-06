@@ -69,7 +69,7 @@ const About = () => {
         }}
       >
 
-        <div className="flex-row mr-4 p-4 text-2xl text-left sm:text-[25px] mb-4 md:mb-12 text-gray-900 md:ml-[200px] ml-6">
+        <div className="flex-row mr-4 p-4 text-2xl text-left sm:text-[25px] mb-4 md:mb-12 mt-12 md:mt-0 text-gray-900 md:ml-[200px] ml-6">
           <img src={deco} alt='deco'/>
           <h2 className="">Know the Business</h2>
           <p className="text-gray-900 font-bold">We are Committed to</p>
