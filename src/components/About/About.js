@@ -1,7 +1,7 @@
 import React from "react";
 // import React, { useState } from "react";
 import { motion } from "framer-motion";
-import Line from "../../assets/images/about/Line.png";
+// import Line from "../../assets/images/about/Line.png";
 
 import Innovation from "../../assets/images/about/Innovation.png";
 import Card from "./Card";
@@ -30,7 +30,12 @@ const doc3 = {
 
 const About = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+  const isSmall = window.innerWidth <= 790;
   const xValue = isMobile ? 50 : 200;
+
+  const prop = 'w-5/6 mx-auto gap-y-8 flex flex-wrap justify-between';
+  const prop2 = "md:w-2/3 w-5/6 mx-auto flex flex-wrap justify-between gap-y-6";
+  const prop3 = isSmall ? prop : prop2;
 
   return (
     <div className="md:mb-20 mb-4 pt-12" id="about">
@@ -63,13 +68,15 @@ const About = () => {
           visible: { opacity: 1, x: 0 },
         }}
       >
-        <div className="text-left flex-row mr-4 p-4 text-2xl text-left sm:text-[25px] mb-4 md:mb-12 text-gray-900 md:ml-[200px] ml-6">
-          <img src={deco} />
+
+        <div className="flex-row mr-4 p-4 text-2xl text-left sm:text-[25px] mb-4 md:mb-12 text-gray-900 md:ml-[200px] ml-6">
+          <img src={deco} alt='deco'/>
           <h2 className="">Know the Business</h2>
           <p className="text-gray-900 font-bold">We are Committed to</p>
         </div>
       </motion.div>
-      <div className="md:w-2/3 w-5/6 mx-auto flex flex-wrap gap-y-6 justify-between">
+      
+      <div className={prop3}>
         <motion.div
           className=""
           initial="hidden"
