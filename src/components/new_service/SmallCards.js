@@ -27,7 +27,7 @@ const SmallCards = ({
     setActive(id);
   };
 
-  const prop = isActive ? "bg-slate-700 text-[#000]" : "text-black"
+  const prop = isActive ? "bg-[#000] text-[#fff]" : "text-black"
 
   return (
     <div
