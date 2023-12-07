@@ -46,7 +46,7 @@ const Contact = () => {
 
     try {
       const response = await fetch(
-        "https://innovest-back-email-service-kfe3.onrender.com/mail/receiveMail",
+        "https://innovest-back-email-service-kfe3.onrender.com/mail/recieveMail",
         {
           method: "POST",
           headers: {
