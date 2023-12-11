@@ -9,24 +9,24 @@ const OurMissionAndVision = () => {
     {
       title: "Expertise",
       description:
-        "Our team of experienced experts have the knowledge and expertise to deliver innovative IT solutions that meet your unique needs.",
+        "Our team of experienced experts have the knowledge and expertise to deliver innovative solutions that meet your unique needs.",
     },
     {
       title: "Tech",
       description:
-        "We stay up to date with the latest trends and technologies in the IT industry, so you can get the most advanced solutions available.",
+        "We're committed to reliable supply chain management, international standards, and customer-centric service to drive economic prosperity in Ethiopia.",
     },
   ];
   const values = [
     {
       title: "Solutions",
       description:
-        "We take a personalized approach to every project, working closely with you to understand your business and create specific solutions.",
+        "We aspire to be a trusted company, forging strong partnerships and contributing to Ethiopia's global trade prominence.",
     },
     {
       title: "Results",
       description:
-        "Our track record speaks for itself – we've helped businesses of all sizes and industries achieve their goals with our IT solutions.",
+        "We aim to lead in the export of minerals and agricultural products, making a positive impact on communities and striving for operational excellence.",
     },
   ];
 
