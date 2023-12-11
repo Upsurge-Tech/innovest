@@ -47,6 +47,7 @@ const NewService = () => {
           className="md:text-5xl text-4xl font-extrabold text-[#00407B] md:col-span-1"
           initial={{ x: -100 }}
           whileInView={{ x: xValue, transition: { duration: 1 } }}
+          viewport={{ once: true, amount: 0.5 }}
         >
           Service
         </motion.h2>
@@ -57,6 +58,7 @@ const NewService = () => {
             className="col-span-2 h-10 bg-black w-full mt-1"
             initial={{ x: 400 }}
             whileInView={{ x: 0, transition: { duration: 1 } }}
+            viewport={{ once: true, amount: 0.5 }}
           ></motion.div>
         )}
       </div>

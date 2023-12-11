@@ -45,6 +45,7 @@ const Testimonilas = () => {
             className="text-2xl md:text-3xl lg:4xl xl:text-5xl font-extrabold text-[#00407B] col-span-3 sm:col-span-1"
             initial={{ x: -100 }}
             whileInView={{ x: xValue, transition: { duration: 1 } }}
+            viewport={{ once: true, amount: 0.5 }}
           >
             Testimonials
           </motion.h2>
@@ -52,6 +53,7 @@ const Testimonilas = () => {
             className="sm:col-span-2 h-10 bg-black w-full mt-1 hidden sm:block"
             initial={{ x: 400 }}
             whileInView={{ x: xValue, transition: { duration: 1 } }}
+            viewport={{ once: true, amount: 0.5 }}
           ></motion.div>
         </div>
       </div>
