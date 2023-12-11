@@ -38,9 +38,9 @@ const Testimonilas = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
   const xValue = isMobile ? 0 : 100;
   return (
-    <div id ="testimonials" className="mt-12 pt-4">
+    <div id="testimonials" className="mt-12 pt-4">
       <div className="ml-8 mt-12 sm:mt-20">
-        <div  className="grid grid-cols-3 overflow-hidden ">
+        <div className="grid grid-cols-3 overflow-hidden ">
           <motion.h2
             className="text-2xl md:text-3xl lg:4xl xl:text-5xl font-extrabold text-[#00407B] col-span-3 sm:col-span-1"
             initial={{ x: -100 }}
@@ -83,6 +83,7 @@ const Testimonilas = () => {
           }}
           autoplay={{
             delay: 0,
+            pauseOnMouseEnter: true,
           }}
           speed={4000}
           // navigation={true}
