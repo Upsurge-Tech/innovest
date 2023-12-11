@@ -13,19 +13,19 @@ import deco from "../../assets/images/vision-and-mission/deco-line.svg";
    const doc1 = {
      title: "Innovation",
      paragraph:
-       "We are dedicated to fostering innovation, continuously seeking new and creative ",
+       " We are dedicated to fostering innovation, continuously seeking solutions to enhance our business practices and benefit our clients.",
      image: Innovation,
    };
    const doc2 = {
-     title: "Innovation",
+     title: "Multi sector",
      paragraph:
-       "We are dedicated to fostering innovation, continuously seeking new and creative ",
+       "We engage in diverse industries, providing comprehensive solutions and opportunities for sustainable growth in various sectors.",
      image: Innovation,
    };
    const doc3 = {
-     title: "Innovation",
+     title: "Investment",
      paragraph:
-       "We are dedicated to fostering innovation, continuously seeking new and creative ",
+       "Our unwavering commitment to investment enables us to grow and expand, ensuring that we can better serve our clients.",
      image: Innovation,
    }
 
