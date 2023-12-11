@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 // import Line from "../../assets/images/about/Line.png";
 
 import Innovation from "../../assets/images/about/Innovation.png";
+import Innovation2 from "../../assets/images/about/Omnichannel.png";
+import Innovation3 from "../../assets/images/about/Growing Money.png";
 import Card from "./Card";
 // import { motion } from "framer-motion";
 import { useMediaQuery } from "react-responsive";
@@ -19,13 +21,13 @@ import deco from "../../assets/images/vision-and-mission/deco-line.svg";
      title: "Multi sector",
      paragraph:
        "We engage in diverse industries, providing comprehensive solutions and opportunities for sustainable growth in various sectors.",
-     image: Innovation,
+     image: Innovation2,
    };
    const doc3 = {
      title: "Investment",
      paragraph:
        "Our unwavering commitment to investment enables us to grow and expand, ensuring that we can better serve our clients.",
-     image: Innovation,
+     image: Innovation3,
    }
 
 const About = () => {
