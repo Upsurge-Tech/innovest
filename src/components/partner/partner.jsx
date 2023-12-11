@@ -77,46 +77,49 @@ import "swiper/css/navigation";
 import "./partners.css";
 import { Autoplay } from "swiper/modules";
 import black from "../../assets/images/testimonials/Black.png";
-
+import globus from "../../assets/images/partner_img/globus.jpg";
+import upsurgeee from "../../assets/images/partner_img/upsurgeee.png";
+import karetta from "../../assets/images/partner_img/karetta.png";
+import compi from "../../assets/images/partner_img/compi.png";
 const Partners = () => {
   const partnersLogo = [
     {
       id: 1,
-      logoSrc: black,
+      logoSrc: globus,
       description:
-        "Description for Logo 2  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique nihil eius voluptatum tempora. Eos, culpa.",
+        "Globus trade company",
     },
 
     {
       id: 2,
-      logoSrc: black,
+      logoSrc: karetta,
       description:
-        "Description for Logo 2  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique nihil eius voluptatum tempora. Eos, culpa.",
+        "KARETTA GIDA TiCARET Sultançiftliği Mahallesi 5. Sokak No 2/A Sultangazi/istanbul karetta@karettaticaret.com  +902124769680",
     },
     {
       id: 3,
-      logoSrc: black,
+      logoSrc: upsurgeee,
       description:
-        "Description for Logo 1 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique nihil eius voluptatum tempora. Eos, culpa.",
+        "Upsurge Tech Addis Ababa, Ethiopia contact@upsurge.com",
     },
     {
       id: 4,
-      logoSrc: black,
+      logoSrc: compi,
       description:
-        "Description for Logo 2 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique nihil eius voluptatum tempora. Eos, culpa.",
+        "Company one www.companyone.com ",
     },
     {
       id: 5,
-      logoSrc: black,
+      logoSrc: compi,
       description:
-        "Description for Logo 1 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique nihil eius voluptatum tempora. Eos, culpa.",
+      "Company one www.companyone.com ",
     },
-    {
-      id: 6,
-      logoSrc: black,
-      description:
-        "Description for Logo 2 Lorem, ipsum dolor sit amet consectetur adipisicing Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
-    },
+    // {
+    //   id: 6,
+    //   logoSrc: black,
+    //   description:
+    //     "Description for Logo 2 Lorem, ipsum dolor sit amet consectetur adipisicing Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+    // },
   ];
   return (
     <>
