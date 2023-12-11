@@ -46,6 +46,7 @@ const About = () => {
           className="md:text-5xl text-4xl font-extrabold text-[#00407B] md:col-span-1"
           initial={{ x: -100 }}
           whileInView={{ x: xValue, transition: { duration: 1 } }}
+          viewport={{ once: true, amount: 0.5 }}
         >
           About
         </motion.h2>
@@ -55,6 +56,7 @@ const About = () => {
           <motion.div
             className="col-span-2 h-10 bg-black w-full mt-1"
             initial={{ x: 400 }}
+            viewport={{ once: true, amount: 0.5 }}
             whileInView={{ x: 0, transition: { duration: 1 } }}
           ></motion.div>
         )}
@@ -63,7 +65,7 @@ const About = () => {
         className=""
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.5 }}
+        // viewport={{ once: true, amount: 0.5 }}
         transition={{ duration: 0.7 }}
         variants={{
           hidden: { opacity: 0, x: -50 },

@@ -81,6 +81,7 @@ const Contact = () => {
           className="text-2xl md:text-3xl lg:text-5xl font-extrabold text-[#00407B] col-span-3 sm:col-span-1"
           initial={{ x: -100 }}
           whileInView={{ x: xValue, transition: { duration: 1 } }}
+          viewport={{ once: true, amount: 0.5 }}
         >
           Contact Us
         </motion.h2>
@@ -88,6 +89,7 @@ const Contact = () => {
           className="sm:col-span-2 h-10 bg-black w-full mt-1 hidden sm:block"
           initial={{ x: 400 }}
           whileInView={{ x: xValue, transition: { duration: 1 } }}
+          viewport={{ once: true, amount: 0.5 }}
         ></motion.div>
       </motion.div>
       <div className="flex flex-col lg:flex-row pr-8 md:pr-16 pb-20 pt-10  lg:pl-0 mt-4 sm:mt-12 gap-5 ml-8 sm:ml-20 md:ml-32 lg:space-x-8">
